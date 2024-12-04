@@ -10,52 +10,58 @@ body {
 	font-size: 18px;
 	line-height: 1.5;
 	color: #242424;
+    text-align: center;
    
 }
 
+img {
+   max-width: 40%;
+   
+}
+
+/* homepage */
 .logo{
     font-family: 'Inspiration', serif;
     font-size: 56px;
-    margin-left: 50px;
+    margin: 0;
+    background-color:#edece9;
 }
 
-.header {
-	
-	margin: auto;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-    background-color: #c8c5bf;
-    position: fixed;
-    width: 100%;
-    height: 100px;
+.menu__checkbox{
+    position: absolute;
+    left: -9999px;
+}
+
+.menu__list{
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color:#edece9;
     
 }
 
-.menu ul {
-	margin-right: 50px;
-	padding: 0;
-	list-style: none;
-	line-height: 1;
-	display: flex;
+.menu__item{
+    border-bottom: 1px solid white;
 }
 
-.menu li {
-	margin-left: 5px;
+.menu__link{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
 }
 
-.menu a {
-	display: block;
-	padding: 10px 15px;
-	color: #242424;
-	text-decoration: none;
-	border-radius: 30px;
+.menu__link:hover {
+    background-color: #c8c5bf;
+    color: white;
+    
+}
 
+.menu__checkbox:checked ~ .menu__list{
+    display: block;
 }
-.menu a:hover {
-	background-color: #a29c93;
-	color: white;
-}
+
 
 
 .cover__description {
@@ -66,35 +72,28 @@ body {
     position: absolute;
     top: 50%;
     left: 10%;
-    
-    
-    
-    
+      
 	
 }
 .cover__photo{
     display: block;
     width: 100%;
     object-fit: cover;
-    
-    
-    
-    
-    
+      
 }
 
-img {
-    width: 20%;
+/* O mne */
+
+.hello{
+    margin-top: 50px;
 }
 
 .column {
     display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
 	align-items: center;
-    
-    
-
 }
+
 
 .column1{
     display: flex;
@@ -103,12 +102,94 @@ img {
     flex-direction: row-reverse;
 }
 
+/* Obrazy */
 
+.autumn{
+    margin-top: 50px;
+}
+
+/* kontakt */
+
+.instagram__text{
+    text-decoration: none;
+    color: black;
+}
+
+.instagram{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+     
+}
+
+.instagram__logo{
+    height: 150px;
+    width: 150px;
+}
+
+form {
+	width: 400px;
+
+    
+}
+
+.form-field {
+	margin-bottom: 10px;
+
+}
+
+.form-field label {
+	display: block;
+	color: rgb(60, 59, 59);
+    text-align: left;
+    
+    
+}
+
+.form-field input[type='text'],
+.form-field input[type='email'],
+.form-field textarea {
+	width: 100%;
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid rgb(60, 59, 59);
+	border-radius: 4px;
+    background-color: #edece9;
+    
+}
+button {
+	border: 0;
+    display: block;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #c8c5bf;
+	color: white;
+	border-radius: 4px;
+    margin-bottom: 50px;
+   
+}
 
 
 .footer{
-	padding: 15px 0;
+	
 	background-color: #c8c5bf;
 	color: white;
 	text-align: center;
+    
 }
+
+@media screen and ( min-width: 640px) {
+    .menu__toggler{
+        display: none;
+    }
+
+    .menu__list{
+        display: flex !important; 
+        justify-content: center;
+    }
+
+    .menu__item{
+        border-bottom: 0;
+    }
+}
+    
