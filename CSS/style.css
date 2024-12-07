@@ -16,7 +16,7 @@ body {
 .page-wrap {
     max-width: 90%;
     margin: 0 auto;
-    background-color: green;
+   
 }
 
 
@@ -69,7 +69,7 @@ body {
 	font-style: italic;
 	margin-bottom: 0;
     color:white;
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 10%;
       
@@ -90,33 +90,52 @@ body {
 .omne{
     margin-bottom: 50px;
 }
-
-.me,
-.workplace{
-    max-width: 30%;
+.column__left{
+    max-width: 50%;
     
 }
-.workplace{
-    position: relative;
-    right: 100px;
-    bottom: 50px;
+.column__right{
+    background-color: white;
+    max-width: 50%;
+    
     
 }
 
+.column1__right,
+.column1__left{
+    max-width: 50%;
+}
+.column__left,
+.column1__right{
+    width: 300px;
+    height: 500px;
+}
+
+.column__left img,
+.column1__right img{
+    max-width: 100%;
+}
 
 
 .column {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 	align-items: center;
+    
 }
 
 
 .column1{
     display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
     flex-direction: row-reverse;
+}
+
+.workplace{
+    position: relative;
+    left: 50px;
+    bottom: 100px;
 }
 
 /* Obrazy */
@@ -128,7 +147,8 @@ body {
 .grid,
 .grid1 {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -139,19 +159,26 @@ body {
 .grid__right,
     .grid1__left {
         display: grid;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 10px;
         background: blue;
-        width: 300px;
+        width: 400px;
         height: 500px;
     }
     
-    .grid__main,
-    .grid1__main {
+    .grid__main
+     {
         background-color: yellow;
         grid-column-start: 1;
         grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 5;
+    }
+    .grid1__main{
+        background-color: yellow;
+        grid-column-start: 2;
+        grid-column-end: 5;
         grid-row-start: 1;
         grid-row-end: 5;
     }
@@ -161,7 +188,6 @@ body {
         background-color: aqua;
         
         
-    
     }
     
     .grid__main img,
@@ -171,31 +197,54 @@ body {
        max-width: 100%; 
     }
 
+    .grid1__thumbnail img:hover,
+    .grid__thumbnail img:hover {
+    transform: scale(3);
+}
+
     
 
 /* kontakt */
 
-.instagram__text{
+.social-content__link{
     text-decoration: none;
     color: black;
-    
-}
-
-.instagram__reels{
-    display: flex;
-    width: 120px;
-    height: 240px;
+    padding-top: 5px;
     
     
 }
+.social-content__image{
+    width: 50px;
+    height: 50px;
+}
 
-.instagram{
+
+.social-content{
     display: flex;
     margin-top: 50px;
     justify-content: center;
+    align-items: center;
     
 }
 
+.instagram-reels {
+    /* display: flex; */
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    margin-top: 50px;
+
+}
+
+
+.instagram-reels__item img {
+    max-width: 100%;
+    width: 500px;
+}
 
 
 
@@ -266,5 +315,10 @@ button {
         border-bottom: 0;
     }
   
+    .instagram-reels{
+        grid: auto-flow / 1fr 1fr 1fr 1fr;
+    }
     
 }
+
+
