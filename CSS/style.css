@@ -13,6 +13,12 @@ body {
     text-align: center;
    
 }
+
+h3,
+h1{
+    color:#b9b4a7
+}
+
 .page-wrap {
     max-width: 90%;
     margin: 0 auto;
@@ -100,6 +106,8 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
     background-color: #edece9;
+    background: linear-gradient(to right, #eae7dc, white );
+    
 }
 .omne{
     margin-bottom: 50px;
@@ -110,12 +118,14 @@ body {
 }
 
 .column1__left{
-    background-color:#edece9 ;
+    
+    background: linear-gradient(to right, #e1ded5, white );
 }
 .column__right{
-    background-color: white;
+    background-color: #d7d3c8;
+    color: white;
     max-width: 50%;
-    
+   
     
 }
 
@@ -157,6 +167,20 @@ body {
     bottom: 140px;
     
 }
+.me{
+    position: relative;
+    top: 5px;
+}
+.line {
+    background: linear-gradient(to right, #d7d3c8, white );
+    height: 2px;
+    width: 100%;
+}
+.line1{
+    background: linear-gradient(to left, #d7d3c8, white );
+    height: 2px;
+    width: 100%;
+}
 
 /* Obrazy */
 
@@ -180,6 +204,12 @@ body {
 .grid1__left img{
     max-width: 100%;
     width: 500px;
+}
+.grid{
+    background: linear-gradient(to right, #eae7dc, white );
+}
+.grid1{
+    background: linear-gradient(to left, #eae7dc, white );
 }
     
 
@@ -227,6 +257,12 @@ body {
     max-width: 100%;
     width: 500px;
 }
+.kontakt{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+}
+
 
 
 
@@ -262,6 +298,18 @@ form {
     background-color: #edece9;
     
 }
+
+.form-field input:hover,
+.form-field textarea:hover{
+    border-color: #dcd7c8;
+}
+    
+input, textarea {
+    border: 2px solid #ccc; 
+    background-color: transparent; 
+    outline: none;
+}
+
 button {
 	border: 0;
     display: block;
@@ -272,6 +320,9 @@ button {
 	border-radius: 4px;
     margin-bottom: 50px;
    
+}
+button:hover{
+    background-color: #c1bbae;
 }
 
 
@@ -353,29 +404,6 @@ button {
         transform: scale(3);
     }
 }
-
-
-
-
-/* 
-.grid1__left img
-.grid__right img {
-    max-width: 100%;
-}*/
-
-
-/* .grid__right *{
-    max-width: 100%;
-}
-/* 
-/* 
-.grid1__left > img {
-    max-width: 100%;
-}
-.grid1__right > img {
-    max-width: 100%;
-}
-*/
 
 
 
