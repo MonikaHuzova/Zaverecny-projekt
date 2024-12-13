@@ -121,9 +121,11 @@ h4{
     background-color: #edece9;
     background: linear-gradient(to right, #eae7dc, white );
     
+    
 }
 .omne{
     margin-bottom: 50px;
+    
 }
 .column__left{
     max-width: 50%;
@@ -138,6 +140,7 @@ h4{
     background-color: #d7d3c8;
     color: white;
     max-width: 50%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
    
     
 }
@@ -332,6 +335,7 @@ button {
 	color: white;
 	border-radius: 4px;
     margin-bottom: 50px;
+   
    
 }
 button:hover{
